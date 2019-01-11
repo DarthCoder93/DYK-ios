@@ -17,7 +17,9 @@ class Article {
     init(data: JSON) {
         let json = data
         self.articleColor = json["articleColor"].string
-        self.article_view_type = json["article_view_type"].int
+        let type = json["article_view_type"].int
+        print(type)
+        self.article_view_type = type
         self.data = ArticleData.init(data: json["data"])
     }
     
